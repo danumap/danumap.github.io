@@ -1,7 +1,9 @@
 import React, { useState, useRef } from "react";
-import { MapContainer, TileLayer, useMapEvents } from "react-leaflet";
+import { MapContainer, TileLayer, useMapEvents,  Marker, Popup } from "react-leaflet";
 import L from "leaflet";
 import "leaflet/dist/leaflet.css";
+
+
 
 const MapComponent = () => {
   const [mapUrl, setMapUrl] = useState("ancien"); 
@@ -32,7 +34,7 @@ const MapComponent = () => {
         <button onClick={() => switchMap("kerys")}>kerys</button>
         <button onClick={() => switchMap("merrie")}>merrie</button>
 
-        <p>Latitude: {-coords.lat.toFixed()}</p>
+        <p>Latitude: {coords.lat.toFixed()}</p>
         <p>Longitude: {coords.lng.toFixed()}</p>
       </div>
 
@@ -46,12 +48,13 @@ const MapComponent = () => {
         worldCopyJump={false}
       >
         <TileLayer
-          url={`/${mapUrl}/{z}/{x}/{y}.png`}
+           url={`${import.meta.env.BASE_URL}${mapUrl}/{z}/{x}/{y}.png`}
           tileSize={512}
           noWrap={true}
           key={mapUrl}
         />
         <MapEvents />
+        <Marker position={[-100,100]}></Marker>
       </MapContainer>
     </>
   );
