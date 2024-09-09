@@ -1,0 +1,16 @@
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.leaflet-container {
+  width: 100vw; /* Full width */
+  height: 100vh; /* Full height */
+}
