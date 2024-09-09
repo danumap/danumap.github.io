@@ -52,4 +52,4 @@ def resize_and_slice_image(image_path, output_folder, tile_size=512, min_size=10
         zoom_level += 1
 
 # Usage
-resize_and_slice_image('public/ancien.png', 'public/ancien/')
+resize_and_slice_image('public/merrie.png', 'public/merrie/')

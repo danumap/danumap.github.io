@@ -14,3 +14,11 @@ html, body, #root {
   width: 100vw; 
   height: 100vh; 
 }
+
+.map-overlay {
+  position: absolute;
+  top: 0;
+  right: 0;
+  border: 2px solid red;
+  z-index: 999;
+}
