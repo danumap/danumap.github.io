@@ -8,7 +8,9 @@ const markers = [
   { map: "ancien", coords: [-300, 500], name: "Example Town", type: "town" },
   { map: "kerys", coords: [-492, 540], name: "The Golden City", type: "town" },
   { map: "innisgallia", coords: [-810, 196], name: "Ravenhall", type: "town" },
-  { map: "merrie", coords: [-650, 300], name: "faceless boiiis", type: "house" }
+  { map: "merrie", coords: [-650, 300], name: "faceless boiiis", type: "house" },
+  { map: "kerys", coords: [-478, 656], name: "Example Bridge", type: "bridge" },
+  { map: "ancien", coords: [-647, 524], name: "Example Stairs", type: "stairs" },
 ];
 
 const getIcon = (type) => {
@@ -24,6 +26,22 @@ const getIcon = (type) => {
     case 'town':
       return new L.Icon({
         iconUrl: '/icons/icon-town.png',
+        iconSize: [50, 50],
+        iconAnchor: [25, 25],
+        popupAnchor: [0, -30],
+        className: "marker-icon"
+      });
+      case 'bridge':
+      return new L.Icon({
+        iconUrl: '/icons/icon-bridge.png',
+        iconSize: [50, 50],
+        iconAnchor: [25, 25],
+        popupAnchor: [0, -20],
+        className: "marker-icon"
+      });
+    case 'stairs':
+      return new L.Icon({
+        iconUrl: '/icons/icon-stairs.png',
         iconSize: [50, 50],
         iconAnchor: [25, 25],
         popupAnchor: [0, -30],
