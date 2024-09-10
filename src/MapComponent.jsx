@@ -18,14 +18,16 @@ const getIcon = (type) => {
         iconUrl: '/icons/icon-house.png',
         iconSize: [50, 50],
         iconAnchor: [25, 25],
-        popupAnchor: [0, -20]
+        popupAnchor: [0, -20],
+        className: "marker-icon"
       });
     case 'town':
       return new L.Icon({
         iconUrl: '/icons/icon-town.png',
         iconSize: [50, 50],
         iconAnchor: [25, 25],
-        popupAnchor: [0, -30]
+        popupAnchor: [0, -30],
+        className: "marker-icon"
       });
     default:
       return new L.Icon.Default();
